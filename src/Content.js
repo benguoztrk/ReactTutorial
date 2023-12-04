@@ -2,6 +2,7 @@ import React from "react";
 import ItemList from "./ItemList";
 
 const Content = ({ items, handleCheck, handleDelete }) => {
+  // we use abstraction on content.js and created two reusable components(ItemList and LineItem) to decluttered the content.js
   return (
     <main>
       {items.length ? (
@@ -11,7 +12,7 @@ const Content = ({ items, handleCheck, handleDelete }) => {
           handleDelete={handleDelete}
         />
       ) : (
-        <p style={{ marginTop: "2rem" }}>Yout List is empty</p>
+        <p style={{ marginTop: "2rem" }}>Your List is empty</p>
       )}
     </main>
   );
